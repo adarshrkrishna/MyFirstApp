@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyFirstApp;assembly=MyFirstApp"
+             x:Class="MyFirstApp.MainPage"
+             BackgroundColor="#F1BBDA"
+             Padding="50">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Username" TextColor="Black" FontAttributes="Bold"
+                   FontSize="Large" HorizontalOptions="Center"/>
+            <local:MyEntry x:Name="Myusername" Margin="20" HorizontalTextAlignment="Center"
+                   ReturnType="Next"  Completed="OnCompleted"/>
+            <Label Text="Password" TextColor="Black" FontAttributes="Bold"
+                   FontSize="Large" HorizontalOptions="Center"/>
+            <Entry x:Name="Mypassword" Margin="20" IsPassword="True"
+                   HorizontalTextAlignment="Center" Completed="OnEntryTwo"/>
+            <Button x:Name="Mybutton" Text="LogIn" Clicked="OnLogin" Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
